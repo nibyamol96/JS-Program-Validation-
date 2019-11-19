@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body,html{
+          height:100%;
+          width:100%;
+          }
+
+        /* Create three equal columns that floats next to each other */
+        .row
+        {
+          height:100%;
+        }
+        .column
+         {
+          float: left;
+          width: 30%;
+          height:90%;
+          margin-left: 1%;
+          padding: 10px;
+          border: 2px solid black;
+
+        }
+
+
+      </style>
+</head>
+<body>
+
+<center><h2>REGISTER FORM</h2></center>
+
+<div class="row">
+  <div class="column">
+    <img src="Capture.png" width="104%;" height="102%;">
+
+  </div>
+  <div class="column" style="background-color:#F34454;">
+            <h2>SIGN UP</h2>
+            <label for=Name><b>Name</b></label><br>
+            <input type="text" placeholder="name" name="name" id="name" required width="20%" height="1em" onblur="namecheck()"><br><br>
+            <div id="nam"></div>
+            <label for="email"><b>Email</b></label><br>
+            <input type="text" placeholder="Enter Email" name="email" id="email"onblur="emailcheck()"><br><br>
+            <div id="em"></div>
+            <label for="psw"><b>Password</b></label><br>
+            <input type="password" placeholder="Enter Password" name="pswd" id="pswd"onblur="passwordchecking()" ><br><br>
+            <div id="pass"></div>
+            <label for="psw-repeat"><b>confirm Password</b></label><br>
+            <input type="password" placeholder="Repeat Password" name="repswd" id="rpswd" onblur="confirmpassword()" ><br><br>
+            <div id="repass"></div>
+
+  </div>
+  <div class="column" style="background-color:#F34454;">
+        <h2>Column 3</h2>
+        <label for="psw-repeat"><b>Birthday</b></label><br>
+        <input type="date" placeholder="birthday" name="bday" id="bday" onblur="checkdate()"><br><br>
+        <div id="date"></div>
+
+        <label for="psw-repeat"><b>Short Bio(maximum 8 characters)</b></label><br>
+        <input type="textarea" rows="10" cols="50" placeholder="bio info" name="bio" id="bio" onkeyup="checkchar()"><br><br><br><br>
+        <div id="short"></div>
+        <input type="button" name="b" value="REGISTER" onclick="namecheck()" onclick="emailcheck()">
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
